@@ -13,13 +13,51 @@ import java.util.ArrayList;
  */
 public class Store {
     String name;
-    ArrayList<Product> products;
-    ArrayList<Account> accounts;
+    ArrayList<Product> products = new ArrayList<Product>();
+    ArrayList<Account> accounts = new ArrayList<Account>();
 
     public Store(String name) {
         this.name = name;
     }
 
+    public void addProduct(Product product){
+        this.products.add(product);
+    }
+    
+    public void addAccount(Account account){
+        this.accounts.add(account);
+    }
+    
+    public void deleteProduct(int id) {
+        //this.products.
+        
+        int index = -1;
+        // search for product index
+        for(int i = 0; i  < this.products.size(); i++){
+            if(this.products.get(i).getId() == id){
+                index = i;
+                break;
+            }
+        }
+        
+        this.products.remove(index);
+    }
+    
+    public void deleteAccount(int account_id) {
+    //this.products.
+
+        int index = -1;
+        // search for product index
+        for (int i = 0; i < this.accounts.size(); i++) {
+            if (this.accounts.get(i).getAccount_id() == account_id) {
+                index = i;
+                break;
+            }
+        }
+
+        this.products.remove(index);
+    }
+    
     public String getName() {
         return name;
     }

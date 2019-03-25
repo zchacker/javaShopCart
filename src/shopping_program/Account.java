@@ -16,10 +16,11 @@ public class Account {
     Customer customer;
     Shopping_cart shoppingCart;
 
-    public Account(int account_id, String username, String password) {
+    public Account(int account_id, String username, String password , Customer customer) {
         this.account_id = account_id;
         this.username = username;
         this.password = password;
+        this.customer = customer;
     }
 
     public Account() {
