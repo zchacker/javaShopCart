@@ -58,6 +58,17 @@ public class Store {
         this.products.remove(index);
     }
     
+    public Product getProductData(int productID){
+        
+        for(int i = 0; i < this.products.size(); i++){
+            if(this.products.get(i).getId() == productID){
+               return this.products.get(i);
+            }
+        }
+
+        return null;
+    }
+    
     public String getName() {
         return name;
     }

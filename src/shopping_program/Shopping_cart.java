@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author user00
  */
 public class Shopping_cart {
-    ArrayList<Order_item> order_items;
+    ArrayList<Order_item> order_items = new ArrayList<Order_item>();
 
     public ArrayList<Order_item> getOrder_items() {
         return order_items;

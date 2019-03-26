@@ -14,7 +14,7 @@ public class Account {
     String username;
     String password;
     Customer customer;
-    Shopping_cart shoppingCart;
+    Shopping_cart shoppingCart = new Shopping_cart();
 
     public Account(int account_id, String username, String password , Customer customer) {
         this.account_id = account_id;
@@ -27,7 +27,7 @@ public class Account {
     }
 
     public Shopping_cart getShoppingCart() {
-        return shoppingCart;
+        return this.shoppingCart;
     }
 
     public void setShoppingCart(Shopping_cart shoppingCart) {

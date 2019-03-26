@@ -56,6 +56,16 @@ public class Product {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+       // return super.toString(); //To change body of generated methods, choose Tools | Templates.
+       return 
+        "-Product ID : " + this.id + 
+        "\n-Product Name: " + this.name + 
+        "\n-Product Supplier: " + this.supplier + 
+        "\n-Product Price: " + this.price;
+    }
     
     
 }
